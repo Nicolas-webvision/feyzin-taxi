@@ -1,0 +1,591 @@
+@charset "UTF-8";
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.banner {
+  background-color: #ffe3a1; /* Fond coloré */
+  color: white;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Conteneur de contenu pour le logo et le titre */
+.banner-content {
+  display: flex;
+  align-items: center;
+  flex-direction: row; /* Alignement horizontal par défaut */
+}
+
+/* Style du logo */
+.logo {
+  width: 200px; /* Taille du logo */
+  margin-right: 20px; /* Espace entre le logo et le titre */
+}
+
+/* Style du titre */
+.banner h1 {
+  font-size: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  margin: 0;
+}
+
+/* Section bannière avec image de fond et texte */
+.banner-text {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Ajuste la hauteur selon les besoins */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+}
+
+.banner-text .banner-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover; /* Couvre toute la section sans déformer l'image */
+  z-index: 1;
+}
+
+.banner-text-content {
+  position: relative;
+  z-index: 2; /* Place le texte au-dessus de l'image */
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent pour lisibilité */
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.banner-text h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.banner-text p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+}
+
+.banner h2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 3rem;
+  text-align: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+  z-index: 20;
+  /* Ajout d'un fond semi-transparent */
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 10px 20px; /* Un peu d'espace autour du texte */
+  border-radius: 5px;
+}
+
+header {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.intro {
+  background-color: #fff7d1; /* Couleur de fond légère pour distinguer la section */
+  padding: 40px 20px; /* Espace autour du texte */
+  text-align: center;
+}
+.intro h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+.intro p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 20px;
+}
+.intro p strong {
+  color: #000; /* Mettre en évidence les points forts */
+}
+
+.why-choose-us {
+  text-align: center;
+  padding: 50px 0;
+}
+.why-choose-us h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+.why-choose-us .features {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.why-choose-us .features .feature {
+  background-color: #ceccca;
+  border-radius: 10px;
+  padding: 20px;
+  width: 200px;
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+.why-choose-us .features .feature h3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+.why-choose-us .features .feature p {
+  font-size: 1rem;
+}
+.why-choose-us .features .feature:hover {
+  transform: scale(1.05);
+  background-color: #e0e0e0;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+}
+.popup .popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 300px;
+  text-align: center;
+}
+.popup .popup-content h3 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.popup .popup-content p {
+  font-size: 1rem;
+}
+.popup .popup-content .close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+nav {
+  background-color: #a46e02;
+  padding: 0;
+  margin: 0;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  z-index: 10;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 1.5rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links a:hover {
+  color: #ddd;
+}
+
+/* Hamburger menu */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 4px 0;
+}
+
+.service-page {
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.service-page .service {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.service-page .service h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+.service-page .service p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.image-text-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #f9f9f9;
+}
+.image-text-block .text-content {
+  width: 60%;
+  padding-right: 20px;
+}
+.image-text-block .text-content h2 {
+  font-size: 2rem;
+}
+.image-text-block .text-content p {
+  font-size: 1rem;
+  color: #333;
+}
+.image-text-block .image-content {
+  width: 40%;
+}
+.image-text-block .image-content img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.medical-transfer {
+  background-color: #f9f9f9;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 2rem auto;
+}
+.medical-transfer h2 {
+  font-size: 2.2rem;
+  color: #333;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+.medical-transfer p {
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.contact-info {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 40px auto;
+  text-align: center;
+}
+.contact-info h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+.contact-info p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 20px;
+}
+.contact-info .contact-details p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.contact-info .contact-details p a {
+  color: #007bff;
+  text-decoration: none;
+}
+.contact-info .contact-details p a:hover {
+  text-decoration: underline;
+}
+
+.map-form-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #d4d4d4;
+  padding: 20px;
+}
+
+#map {
+  width: 100%;
+  max-width: 600px;
+  height: 400px;
+  margin-bottom: 20px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Les labels et les champs */
+label {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #333;
+  width: 100%; /* Pour que le label prenne la largeur du parent */
+}
+
+select, input {
+  width: 100%;
+  max-width: 400px;
+  padding: 10px;
+  margin-bottom: 15px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+button {
+  width: 100%;
+  max-width: 400px;
+  padding: 12px;
+  font-size: 1.1rem;
+  color: #fff;
+  background-color: #333;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #555;
+}
+
+/* Styles pour les paragraphes */
+p {
+  font-size: 1rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.about-text {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-size: 1rem; /* Taille de texte par défaut */
+  line-height: 1.6;
+  color: #333; /* Couleur du texte */
+}
+
+.about-text p {
+  margin-bottom: 15px;
+}
+
+.footer {
+  background-color: #a46e02;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+.footer .footer-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-links {
+  margin: 20px 0;
+}
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-links ul li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.footer-links ul li a {
+  color: white;
+  text-decoration: none;
+}
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
+
+.footer-info {
+  color: white;
+  text-align: center;
+}
+
+.footer-info p {
+  color: inherit;
+}
+
+@media (max-width: 768px) {
+  .nav {
+    position: relative;
+  }
+  .nav-links {
+    display: none; /* Masquer le menu par défaut */
+    flex-direction: column;
+    position: absolute;
+    top: 100%; /* Juste en dessous du header */
+    left: 0;
+    right: 0;
+    background-color: #552f00;
+    text-align: center;
+  }
+  .nav-links.open {
+    display: flex; /* Montrer le menu quand la classe open est ajoutée */
+  }
+  .hamburger {
+    display: flex; /* Montrer le hamburger sur mobile */
+  }
+  .nav-links li {
+    margin: 1rem 0;
+  }
+  .banner h1 {
+    font-size: 2.5rem;
+    padding: 8px 16px;
+    top: 30%;
+  }
+  .popup-content {
+    width: 90%;
+    max-width: none;
+    padding: 15px;
+  }
+  .intro h2 {
+    font-size: 1.8rem;
+  }
+  .intro p {
+    font-size: 0.9rem;
+  }
+  .footer .footer-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .footer-links ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  .service-page .service h2 {
+    font-size: 2.5rem;
+  }
+  .service-page .service p {
+    font-size: 1.2rem;
+  }
+  .image-text-block {
+    flex-direction: column;
+    text-align: center;
+  }
+  .image-text-block .text-content .image-content {
+    width: 100%;
+    padding: 0;
+  }
+  .image-text-block .text-content {
+    margin-bottom: 20px;
+  }
+  .image-text-block h2 {
+    font-size: 1.5rem;
+  }
+  .image-text-block p {
+    font-size: 0.9rem;
+  }
+  .contact-info {
+    padding: 20px;
+  }
+  .contact-info h2 {
+    font-size: 1.8rem;
+  }
+  .contact-info p {
+    font-size: 1rem;
+  }
+  .contact-info .contact-details p {
+    font-size: 1.1rem;
+  }
+  .banner h2 {
+    font-size: 1.5rem;
+  }
+  .medical-transfer {
+    padding: 1.5rem;
+  }
+  .medical-transfer h2 {
+    font-size: 1.8rem;
+  }
+  .medical-transfer p {
+    font-size: 1.1rem;
+  }
+  #map {
+    height: 300px;
+  }
+  select, input, button {
+    width: 100%;
+  }
+  #map {
+    height: 300px;
+  }
+  select, input, button {
+    width: 100%;
+  }
+  .about-text {
+    padding: 15px;
+    font-size: 0.9rem; /* Réduit légèrement la taille de la police sur petits écrans */
+  }
+  #reservationButton {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+  #contactOptions a {
+    font-size: 0.9rem;
+    padding: 8px;
+  }
+  .banner-content {
+    flex-direction: column; /* Empile le logo et le titre */
+    text-align: center;
+  }
+  .banner-text {
+    height: 200px;
+  }
+  .banner-text h2 {
+    font-size: 2rem;
+  }
+  .banner-text p {
+    font-size: 1rem;
+  }
+}
+.logo {
+  margin: 0 0 10px 0; /* Espace en bas du logo en version mobile */
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Feyzin</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="banner">
+        <div class="banner-content">
+            <img class="logo" src="images/logoTaxiFeyzin.png" alt="Logo de Taxi Feyzin">
+            <h1>Tarifs</h1>
+        </div>
+    </section>
+    
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="services.html">Nos prestations</a></li>
+                <li><a href="price.html">Tarifs</a></li>
+                <li><a href="medical-transfer.html">Transferts Médicaux</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+    
+    <section class="intro">
+        <div class="container">
+            <h2>Estimez le prix de votre trajet</h2>
+            <p>
+                Le tarif indiqué ici est une estimation et sert uniquement de référence. Le prix final sera déterminé par la société Taxi Feyzin. Ce tarif peut varier en fonction des caractéristiques du trajet, des retards, des changements de destination, ou de toute autre demande ou modification souhaitée par le client. Taxi Feyzin se réserve également le droit d’ajuster le tarif avant ou pendant la prestation en fonction des circonstances. Nous nous engageons à vous offrir un service de qualité en toute transparence.
+            </p>
+        </div>
+    </section>
+    
+    <main>
+        <div class="map-form-container">
+            <div id="map"></div>
+
+            <label for="tripType">Type de trajet :</label>
+            <select id="tripType">
+                <option value="single">Aller simple</option>
+                <option value="roundtrip">Aller-retour</option>
+            </select>
+
+            <label for="start">Adresse de départ :</label>
+            <input type="text" id="start" placeholder="Entrez l'adresse de départ">
+
+            <label for="end">Adresse d'arrivée :</label>
+            <input type="text" id="end" placeholder="Entrez l'adresse d'arrivée">
+
+            <label for="time">Heure de départ :</label>
+            <input type="time" id="time">
+
+            <label for="luggage">Nombre de bagages :</label>
+            <input type="number" id="luggage" placeholder="Nombre de bagages" min="0">
+
+            <button id="calculateDistance">Calculer le trajet</button>
+
+            <p id="distanceOutput"></p>
+            <p id="priceOutput"></p>
+        </div>
+    </main>
+    
+    <!-- Script local -->
+    <script src="script.js"></script>
+
+    <!-- Script de Google Maps avec les bibliothèques Places -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBEKrfyPJB0kq9uKM7hjT9-FRuzT-6mQOg&libraries=places&callback=initMap"></script>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="services.html">Nos Prestations</a></li>
+                    <li><a href="medical-transfer.html">Transferts Médicaux</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="legal-notices.html">Mentions légales</a></li>
+                </ul>
+            </div>
+            <div class="footer-info">
+                <p>© 2024 Feyzin Taxi - Tous droits réservés</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
