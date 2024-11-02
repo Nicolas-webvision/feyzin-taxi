@@ -507,6 +507,52 @@ p {
     color: inherit;
 }
 
+// Page de mentions légales 
+
+.legal-notices {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+        font-size: 2.5rem;
+        color: #333;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+        color: #a46e02; // Couleur de titre secondaire
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 15px;
+    }
+
+    a {
+        color: #007bff;
+        text-decoration: none;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    section {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #f9f9f9;
+        border-radius: 5px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+    }
+}
+
 @media (max-width: 768px) {
 
     .nav {
@@ -573,7 +619,7 @@ p {
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 0.9rem;
         }
     }
 
@@ -628,7 +674,7 @@ p {
         }
 
         p {
-            font-size: 1.1rem;
+            font-size: 0.9rem;
         }
     }
 
@@ -677,12 +723,28 @@ p {
     }
 
     .banner-text p {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
 }
 
     .logo {
         margin: 0 0 10px 0; /* Espace en bas du logo en version mobile */
+    }
+
+    .legal-notices {
+        padding: 10px;
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
     }
 
 
