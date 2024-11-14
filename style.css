@@ -5,7 +5,7 @@ body {
 }
 
 .banner {
-  background-color: #ffe3a1; /* Fond coloré */
+  background: linear-gradient(90deg, blue, white, red);
   color: white;
   padding: 20px;
   display: flex;
@@ -100,7 +100,7 @@ header {
 }
 
 .intro {
-  background-color: #fff7d1; /* Couleur de fond légère pour distinguer la section */
+  background-color: #f3f6ff; /* Couleur de fond légère pour distinguer la section */
   padding: 40px 20px; /* Espace autour du texte */
   text-align: center;
 }
@@ -188,7 +188,7 @@ header {
 }
 
 nav {
-  background-color: #a46e02;
+  background: linear-gradient(90deg, blue, white, red);
   padding: 0;
   margin: 0;
   height: 60px;
@@ -412,8 +412,8 @@ p {
 }
 
 .footer {
-  background-color: #a46e02;
-  color: white;
+  background: linear-gradient(90deg, blue, white, red);
+  color: rgb(0, 0, 0);
   padding: 20px 0;
   text-align: center;
 }
@@ -436,7 +436,7 @@ p {
   margin: 0 10px;
 }
 .footer-links ul li a {
-  color: white;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 .footer-links ul li a:hover {
@@ -444,7 +444,7 @@ p {
 }
 
 .footer-info {
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
 }
 

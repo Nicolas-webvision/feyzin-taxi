@@ -4,7 +4,7 @@ body {
 }
 
 .banner {
-    background-color: #ffe3a1; /* Fond coloré */
+    background: linear-gradient(90deg, blue, white, red);
     color: white;
     padding: 20px;
     display: flex;
@@ -103,7 +103,7 @@ header {
 // Section intro 
 
 .intro {
-    background-color: #fff7d1; /* Couleur de fond légère pour distinguer la section */
+    background-color: #f3f6ff; /* Couleur de fond légère pour distinguer la section */
     padding: 40px 20px; /* Espace autour du texte */
     text-align: center;
 
@@ -206,7 +206,7 @@ header {
 // Menu de navigation 
 
 nav {
-    background-color: #a46e02;
+    background: linear-gradient(90deg, blue, white, red);
     padding: 0;
     margin: 0;
     height: 60px;
@@ -462,8 +462,8 @@ p {
 // Pied de page
 
 .footer {
-    background-color: #a46e02;
-    color: white;
+    background: linear-gradient(90deg, blue, white, red);
+    color: rgb(0, 0, 0);
     padding: 20px 0;
     text-align: center;
 
@@ -487,7 +487,7 @@ p {
             margin: 0 10px;
 
             a {
-                color: white;
+                color: rgb(0, 0, 0);
                 text-decoration: none;
 
                 &:hover {
@@ -499,7 +499,7 @@ p {
 }
 
 .footer-info {
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
 }
 
